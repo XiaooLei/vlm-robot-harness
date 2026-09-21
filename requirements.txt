@@ -1,0 +1,10 @@
+# Core (all of these are needed to import the package)
+numpy>=1.21
+scipy>=1.7
+
+# Robot side: zerorpc client to the arm backend
+zerorpc>=0.6
+
+# Cameras: ZED SDK binds pyzed; opencv handles resize/encode/blob detection
+opencv-python>=4.5
+# pyzed is installed by the ZED SDK, not from PyPI

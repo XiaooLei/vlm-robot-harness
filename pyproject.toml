@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vlm-robot-harness"
+version = "0.1.0"
+description = "Single-action-at-a-time VLM agent loop for a Franka arm with three camera views"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "numpy>=1.21",
+    "scipy>=1.7",
+]
+
+[project.optional-dependencies]
+robot = ["zerorpc>=0.6"]
+cameras = ["opencv-python>=4.5"]
+dev = ["ruff"]
+
+[project.scripts]
+vlm-robot-harness = "vlm_harness.loop:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,0 +1,13 @@
+*.pyc
+__pycache__/
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+
+# Run artefacts: logs, JPEGs, MP4s
+runs/
+
+# Local credentials and machine-specific settings
+.env
+*.key
